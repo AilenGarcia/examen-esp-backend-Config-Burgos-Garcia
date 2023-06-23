@@ -40,13 +40,7 @@ resilience4j:
           - java.io.IOException
           - java.net.SocketTimeoutException
       instances:
-        retryMovie:
-          base-config: default
-          max-retry-attempts: 5
-          wait-duration: 2s
-          retry-exceptions:
-            - java.net.ConnectException
-        retrySerie:
+        retryCatalog:
           base-config: default
           max-retry-attempts: 5
           wait-duration: 2s
@@ -63,13 +57,7 @@ resilience4j:
         automatic-transition-from-open-to-half-open-enabled: true
         failure-rate-threshold: 50
     instances:
-      circuitMovie:
-        base-config: default
-        sliding-window-type: COUNT_BASED
-        sliding-window-size: 5
-        wait-duration-in-open-state: 1m
-        failure-rate-threshold: 20
-      circuitSerie:
+      circuitCatalog:
         base-config: default
         sliding-window-type: COUNT_BASED
         sliding-window-size: 5
