@@ -10,7 +10,7 @@ spring:
     port: 5672
   mongodb:
     embedded:
-      version: 4.0.2
+      version: 4.2.3
   data:
     mongodb:
       database: test
